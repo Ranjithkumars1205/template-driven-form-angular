@@ -1,0 +1,50 @@
+
+<!-- first, we wrap the form in a container -->
+<div class="container">
+    <h2>User Settings</h2>
+    <!-- #form is a variable that we can use anywhere within this template -->
+    <form #form="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control">
+        </div>
+
+        <div class="form-check form-group">
+            <input type="checkbox" class="form-check-input" name="emailOffers" id="emailOffers">
+            <label for="emailOffers" class="form-check-label">Email Special Offers</label>
+        </div>
+
+        <p>User Interface Style</p>
+        <div class="form-group">
+            <!-- The way these radio buttons get grouped together is by the name attribute right here.
+            it should same name, that's what makes them work together as a group -->
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="InterfaceStyle" id="lightInterface" 
+                value="light" checked>
+                <label for="lightInterface" class="form-check-label">Light</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="InterfaceStyle" id="mediumInterface" 
+                value="medium" checked>
+                <label for="mediumInterface" class="form-check-label">Medium</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="InterfaceStyle" id="darkInterface" 
+                value="dark" checked>
+                <label for="darkInterface" class="form-check-label">Dark</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="subscriptionType">Subscription Type</label>
+            <select class="form-control" id="subscriptionType">
+                <option value="">Monthly</option>
+                <option value="">Annual</option>
+                <option value="">Lifetime</option>
+            </select>
+        </div>
+
+
+        <button class="btn btn-primary">Send</button>
+    </form>
+</div>
